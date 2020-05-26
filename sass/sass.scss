@@ -1,0 +1,15 @@
+$bgcolor:#579c87;
+
+body
+{
+    width: 70%;
+    text-align: center;
+    margin: auto;
+    box-shadow: 0px 0px 5px -1px rgba(0,0,0,0.68);
+    
+    
+}
+@import "./Accueil/accueil";
+@import "./Footer/footer";
+@import "./Header/header";
+@import "./Menus/menus"

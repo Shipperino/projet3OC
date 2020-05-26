@@ -1,0 +1,21 @@
+$bgcolor:#579c87;
+$h1color: #fdcb46;
+
+header
+{
+    background-color: $bgcolor;
+    height: 80px;
+    margin-bottom: 30px;
+    
+    h1
+{
+    color: $h1color;
+    text-align: center;
+    position: relative;
+    top: 15px;
+    font-size: 2.5em ;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+}
+
