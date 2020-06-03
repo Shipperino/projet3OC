@@ -1,0 +1,22 @@
+
+$mobile: 900px;
+
+
+@media all and (max-width: $mobile)
+{
+    body{width: 100%;}
+    main
+    {
+        margin: 0 5% 0 5%;;
+    }
+    .menu{     
+        width: 100%;
+
+        &__accueil
+        {
+            width: 47%;
+            margin: auto;
+            margin:1.5%;
+        }
+}
+}

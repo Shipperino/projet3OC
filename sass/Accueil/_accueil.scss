@@ -1,90 +1,198 @@
-$border-shadow: 0px 0px 5px -1px rgba(0,0,0,0.68);;
+$border-shadow: 0px 0px 5px -1px rgba(0,0,0,0.68);
 $bgcolor:#579c87;
 $h1color: #fdcb46;
 $head-font: Calibri;
-$hover-color: darken( $bgcolor, 10);
+$clr-menu1:#fcdfdb ;
+$clr-menu2: #fff5fe ;
+$clr-menu3:#F9F9F9;
+$clr-menu4:#FDFFFD;
+$amount: 10%;
+$anim-dur: 1000ms;
+$anim-delay: $anim-dur / 5;
 
-
-.menuflex
-{
-    display: flex;
-    text-align: center;
-    justify-content: center;
-}
-// @mixin boxsize {
-  
-//     height: 280px;
-//     padding-top: 50px;
-//     font-style: Calibri;
-//     transition: all 300ms ease-in-out;
-//         &:hover{
-//             transform: scale(1.2);
-//         }
-// }
-.menuaccueil
+.menu
     {
-         text-decoration: none;  
-         overflow: hidden;   
-         width: 275px;
-         height: 280px;  
-         padding-top: 50px;
-         margin: 1.5%;
-         box-shadow: $border-shadow; 
-         transition: all 350ms ease-in-out;
-             &:hover{
-                 transform: scale(1.1);
-                 cursor: pointer;  
+         
+         display: flex;
+         flex-wrap: wrap;
+         text-align: center;
+         justify-content: center;       
+         width: 73%;
+         margin: auto;
+         
+        &__accueil
+            {
+                text-decoration: none;
+                overflow: hidden;   
+                width: 33.5%;
+                height: 350px; 
+                margin: 1.5%;
+                box-shadow: $border-shadow; 
+                transition: 350ms;
+           
+                          
+            &--red
+            {
+                background-color: $clr-menu1 ;
+                font-family:'Dancing Script';
+              
+                    &:hover{
+                        background-color: darken($clr-menu1, $amount);                     
+                }          
+                .reverse
+                {
+                    color: #4d1111;
                 }
-                &--red
-                {
-                        background-color: #fcdfdb;
-                        font-family: sans-serif;
-                        color: saturate($color: #000000, $amount: 0);
-                }     
-                &--pink
-                {
-                        background-color: #fff5fe ;               
-                }    
-                &--grey
-                {
-                        background-color: #F9F9F9 ;
-                }     
-                &--white
-                {
-                        background-color: #FDFFFD;
-                }
-        
-    }  
+                
+              
+            }     
+            &--pink
+            {
+                    background-color: $clr-menu2 ; 
+                    font-family: 'Montserrat Alternates', sans-serif;
+                    &:hover {                      
+                        background-color: darken($clr-menu2, $amount);
+                    }
+                    .reverse{
+                        background: linear-gradient(to right, #CE8800 0%, #6B0AC5 100%);
+                    -webkit-text-fill-color: transparent;
+                    -webkit-background-clip: text;
+                    }
+               
+            }    
+            &--grey
+            {       
+                    background-color: $clr-menu3;
+                    font-family: 'Satisfy', cursive;
+                    
+                    &:hover {
+                        background-color: darken($clr-menu3, $amount);
+                    }
+                    .reverse{
+                        background: -moz-linear-gradient(45deg, rgb(0, 35, 80) 0%, rgb(0, 225, 255) 100%);
+                        background: -webkit-linear-gradient(45deg,  rgb(0, 34, 78) 0%, rgb(0, 225, 255) 100%);
+                        background: linear-gradient(45deg,  rgb(0, 35, 82) 0%, rgb(0, 225, 255) 100%);
+                        -webkit-text-fill-color: transparent;
+                        -webkit-background-clip: text;
+                    }
+            }     
+            &--white
+            {       font-family: 'Satisfy', cursive;
+                    background-color: $clr-menu4;
+                    
+                    &:hover {                      
+                        background-color: darken($clr-menu4, $amount);
+                    }
+                    .reverse
+                    {
+                        background: #2B8A47;
+                        background: -moz-linear-gradient(45deg, #2B8A47 0%, rgb(147, 255, 210) 100%);
+                        background: -webkit-linear-gradient(45deg, #2B8A47 0%, rgb(158, 255, 215) 100%);
+                        background: linear-gradient(45deg, #2B8A47 0%, rgb(153, 253, 211) 100%);
+                        -webkit-text-fill-color: transparent;
+                        -webkit-background-clip: text;
+                    }
+            }
+        }
+    }
 
+         
+    
 .reverse
 {
     display: flex;
     flex-direction: column-reverse;
+    justify-content: center;   
+    height: 100%;  
+    width: 100%;
+    text-decoration: none;
+    transition: 250ms;
+
+            &:hover{ 
+            transition: ease-in-out 250ms ;
+            transform: scale(1.4);   
+                    
+        }
+
+       
 }
+$blackdot: 3rem;
 
-
-
-
-@mixin button {
+.prochainement {
+    justify-content: center;
     font-family: $head-font;
     font-size: 1.7rem;
     text-decoration: none;
     text-align: center;
     width: 12.5rem;
-    display: block; 
-    margin: .5rem auto 0;
+    height: 40px ;
+    margin:auto ;
     background-color: $bgcolor;
     color: $h1color;
     border-radius: 10px;
-    transition: all 350ms ease-in-out;
-    &:hover {
-        cursor: pointer;  
-        transform: scale(1.5, 1.4);
+    cursor: pointer;
     }
-}
+
+@mixin dot {
+    height: 15px;
+    background: rgba(189, 170, 170, 0.952);
+    border-radius:50%;
+    width: 15px;
+    }
+
+$anim-dur: 1000ms;
 
 .prochainement
-{
-    @include button;
+{ 
+    outline: none;
+    
+.prochainements
+{ 
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 ;
+    padding-top: 6px; 
+    width: 100%;     
+                &__dot
+                {
+                display: flex;
+                justify-content: space-evenly;
+                border-radius:50%;
+                animation: bars $anim-dur backwards infinite;
+                animation-direction: normal;
+                
+            
+                 }
 
+                &__dot--b1
+                {
+                    @include dot;
+                    animation-delay: 200ms;
+                
+                }
+                &__dot--b2
+                {
+                    @include dot;
+                    animation-delay: 400ms;
+                
+                }
+                &__dot--b3
+                {
+                    @include dot;
+                    animation-delay: 600ms;
+                
+                }
+                
+            }
+        
+    }
+
+
+@keyframes bars {
+    0%{
+        transform: scale(0)
+    }
+    100%{
+        transform: scale(0.9);
+    }
 }

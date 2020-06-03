@@ -1,5 +1,15 @@
 $bgcolor:#579c87;
 $h4color: #fdcb46;
+$shake-intensity: 5%;
+@keyframes headshake {
+    25% {
+        transform: translateX($shake-intensity);
+    }
+    75% {        
+        transform: translateX($shake-intensity * -1);
+    }
+}
+
 footer
 {
     display: flex;
@@ -10,16 +20,23 @@ footer
     padding-right: 3%;
     position: sticky;
     bottom: 0;
+    height: 80px;
     
     a{
-        text-decoration: none
+        text-decoration: none;
+
+        &:hover{
+            animation: headshake 200ms cubic-bezier(.6,.3,.9,.2);
+        }
     }
     
     h4
     {
         color: $h4color;
-        font-size: 1.5em;
+        font-size: 1.2em;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         overflow: hidden;
+        
+        
     }
 }

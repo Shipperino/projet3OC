@@ -1,3 +1,5 @@
+$border-shadow: 0px 0px 5px -1px rgba(0,0,0,0.68);
+
 .flexicon
 {
     display: flex;
@@ -12,5 +14,196 @@
         margin-right: 22px;
     }
 }
+.fas
+{
+    font-size: 2em;
+    color: red;
+    background: linear-gradient(to right, rgb(241, 166, 96) 0%, rgb(235, 221, 95) 100%);
+    -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+}
+
+.mainmenu
+{  
+    width: 55%;
+    margin: auto;
+    padding: 40px 12% 40px 12%;
+    box-shadow: $border-shadow;
+
+    .fadetitle
+    {
+        &--blue
+        {
+        background: linear-gradient(to right, rgb(3, 0, 151) 0%, rgb(38, 165, 250) 100%);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        font-family: 'Montserrat Alternates', sans-serif; 
+        }
+        &--orange
+        {
+        background: linear-gradient(to right, rgb(255, 192, 66) 0%, #6B0AC5 100%);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        font-family: 'Montserrat Alternates', sans-serif;
+        }
+    }
+   
+    &--blue
+    {
+        background: -moz-linear-gradient(45deg, rgb(0, 35, 80) 0%, rgb(0, 225, 255) 100%);
+        background: -webkit-linear-gradient(45deg,  rgb(0, 34, 78) 0%, rgb(0, 225, 255) 100%);
+        background: linear-gradient(45deg,  rgb(0, 35, 82) 0%, rgb(0, 225, 255) 100%);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+    }
+    &--enchanté {
+    background-color: #fcdfdb;
+    font-family: 'Dancing Script', cursive;
+      }
+
+    &--chic
+    {
+        font-family: 'Montserrat Alternates', sans-serif;
+        
+        .frmenu1
+        {
+            color: #CE8800;
+        }
+        .frmenu2
+        {
+            
+            color: rgb(137, 57, 168);      
+        }
+        .frmenu3
+        {
+            color: rgb(0, 21, 139);
+        }      
+    
+    }
+    &--délice
+    {
+        font-family: 'Satisfy', cursive;
+    }
+    .aligncenter
+    {
+        text-align: center;
+    }
+    
+}
 
 
+.priceflex
+{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+section{
+    h3{
+        padding: 0 10px 0 10px;
+        font-size: 1.4em;
+        
+    }
+
+    p{
+        text-align: left;
+        font-size: 1.4em;
+        
+    }
+}
+.traitmenu
+        {
+            display: flex;
+            width: 100%;
+        
+    
+            
+        &__left
+        {
+            border-bottom: 3px solid;
+            width: 35%;;
+            margin: auto;
+            margin-left: 0%;
+        }
+        &__right
+        {
+            border-bottom: 3px solid;
+            width: 35%;;
+            margin: auto;
+            margin-right: 0;
+        }
+        &__blue1
+        {
+            color: rgb(0, 35, 80);
+        }
+        &__blue2
+        {
+            color: rgb(44, 85, 148)
+        }
+        &__blue3
+        {
+            color: rgb(107, 159, 255); 
+        }
+        &__green
+        {
+            border-image-source: linear-gradient(45deg, rgb(0,143,104), rgb(153, 252, 150));
+            border-image-slice: 1;
+        &--reverse
+        {
+            border-image-source: linear-gradient(to left, rgb(0,143,104), rgb(153, 252, 150));
+            border-image-slice: 1;
+
+        }
+        }
+    }
+
+
+
+// .progress{
+//     display: inline-block;
+//         &__bar {
+//         height: 2px;
+//         position: relative;       
+//         }
+//         &__bar::after {
+//             content: '';
+//             margin: auto;
+//             flex-direction: column;
+//             height: 2px;
+//             transform-origin: left;
+//             width: 100%;
+//             background: transparent;
+//             transition: width .5s ease ;
+//             position: absolute;
+           
+//         }
+//         &__bar:hover::after {
+//             width: 90%;
+//             background: rgb(255, 4, 4)241, 0, 0;
+//         }
+// }
+
+.mainmenu{
+
+h3 {
+    position: relative;
+    text-decoration: none;
+    padding-bottom: 5px;
+   
+&::after {
+        content: '';
+        position: absolute;     
+		left: 0%;
+		bottom: 0;
+		width: 0;
+		height: 2px;
+        transition: all ease-in-out 400ms;
+    }
+
+        &:hover::after {
+            width: 100%;
+            background: #444;                 
+        }
+    }
+}
